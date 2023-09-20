@@ -28,7 +28,7 @@ export const ModalCreateItem: React.FC<ModalCreateItemProps> = ({
     [name, setName] = useState(""),
     [selected, setSelected] = useState(""),
     [description, setDescription] = useState("");
-
+//TODO форма через стэйт
   function clearState() {
     setName("");
     setDescription("");

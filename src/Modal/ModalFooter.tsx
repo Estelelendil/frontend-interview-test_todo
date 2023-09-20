@@ -22,7 +22,7 @@ export const ModalFooter: React.FC<ModalFooterProps> = ({
       </ModalBtn>
       <ModalBtn
         onClick={() => {
-          clearState && clearState();
+          clearState && clearState();//TODO clearState.?()
           setActive(false);
         }}
       >

@@ -32,13 +32,13 @@ const initialState: CategoriesState[] = [
     category: "",
   },
 ];
-
+// TODO возвращать новый стейт удаление не работает
 export const tasksSlice = createSlice({
   name: "tasks",
   initialState,
   reducers: {
     tasksAdded: (state, action) => {
-      state.push({
+      state.push({//TODO нужно копировать обьект чтобы была новая ссылка
         id: uuidv4(),
         ...action.payload,
       });
@@ -61,7 +61,7 @@ export const tasksSlice = createSlice({
       state.splice(rmTaskIndex, 1);
     },
     tasksClearedCategories: (state, action) => {
-      state.map((task) => {
+      state.map((task) => {//TODO возвращать новый стэйт 
         if (task.category === action.payload) task.category = "";
       });
     },

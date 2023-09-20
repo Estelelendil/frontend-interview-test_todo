@@ -22,7 +22,7 @@ export const ModalDropdown: React.FC<ModalDropdownProps> = ({
     <div className="dropdown" onClick={() => setIsActive(!isActive)}>
       <span className="dropdown-label">Категория</span>
       <div className={selected ? "dropdown-btn" : "dropdown-btn placeholder"}>
-        {options.find((option) => option.id === selected)?.name ||
+        {options.find((option) => option.id === selected)?.name ||//TODO тоже можно смотреть в обьект
           "Выберите категорию"}
         <img src={down} alt="open dropdown" />
       </div>

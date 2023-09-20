@@ -21,7 +21,7 @@ interface ListItemProps {
 export const ListItem: React.FC<ListItemProps> = ({ item }) => {
   const categories = useSelector(selectAllCategories),
     [editModalActive, setEditModalActive] = useState(false)
-  let [removeModalActive, setRemoveModalActive] = useState(false);
+  let [removeModalActive, setRemoveModalActive] = useState(false);//TODO const
 
   return (
     <>
@@ -32,7 +32,7 @@ export const ListItem: React.FC<ListItemProps> = ({ item }) => {
             {item.category && (
               <span className="list-item-col1-row1__category">
                 {
-                  categories.find((category) => category.id === item.category)
+                  categories.find((category) => category.id === item.category)//TODO в стэйте категории в виде обьекта id, name d vfccbdt o(n) а в обьекте о(1)
                     ?.name
                 }
               </span>
@@ -52,7 +52,7 @@ export const ListItem: React.FC<ListItemProps> = ({ item }) => {
           <button
             className="list-item-col2__btn"
             onClick={() => {
-              removeModalActive = true;
+              removeModalActive = true;//TODO set
             }}
           >
             <img src={remove} alt="remove" />

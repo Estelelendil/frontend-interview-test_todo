@@ -11,7 +11,7 @@ import { tasksRemoved, tasksClearedCategories } from "../features/tasksSlice";
 import { categoriesRemoved } from "../features/categoriesSlice";
 
 interface ModalRemoveItemProps {
-  item: {
+  item: {//TODO вынести itеm  в отдельный тип
     id: string;
     name: string;
     description: string;
